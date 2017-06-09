@@ -4,6 +4,12 @@
 .hidden {
     display: none !important;
 }
+/* ======================================================== */
+/* GLOBAL classes */
+/* ======================================================== */
+
+}
+
 
 .visuallyhidden {
     border: 0;
@@ -22,13 +28,6 @@
   clear: both;
 }
 
-/* ======================================================== */
-/* Fonts definitions */
-/* ======================================================== */
-
-/* ======================================================== */
-/* Our styles */
-/* ======================================================== */
 * {
     box-sizing: border-box;
 }
@@ -36,6 +35,82 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Raleway', sans-serif;
 }
+.container {
+  margin: 0 auto;
+  width: 1060px;
+}
+.page-header {
+  background: #000;
+  height: 40px;
+}
+.page-logo {
+  float: left;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 40px;
+  display: inline-block;
 
-
+}
+.page-logo span {
+  color: rgba(0,200,170,1)
+}
+.page-nav {
+  float: right;
+  text-align: right;
+}
+.page-nav ul {
+  text-align: right;
+}
+.page-nav li {
+  display: inline-block;
+  position: relative;
+}
+.page-nav li a {
+  display: block;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.page-nav-sublist:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #000;
+  position: absolute;
+  left: 60px;
+  top: -20px;
+  transform: translate(-50%, 0);
+}
+.page-nav-sublist {
+  position: absolute;
+  top: 45px;
+  left: -10px;
+  background: #000;
+  width: 150px;
+  padding: 10px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s opacity, 0.5s top;
+}
+.page-nav li:hover .page-nav-sublist {
+  opacity: 1;
+  visibility: visible;
+  top: 55px;
+}
+.page-nav-sublist li {
+display: block;
+text-align: left;
+}
+.page-nav-sublist li a {
+  text-transform: none;
+  font-weight: normal;
+  line-height: 32px;
+}
